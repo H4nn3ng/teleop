@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* This can help ensure that your app doesn't extend beyond viewport causing scroll */
+}
+
+.mapContainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; /* Ensures nothing overflows out of the container */
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  /* Ensure there's no excessive padding or margin */
+  padding: 0;
+  margin: 0;
+}
+
+.controlPanel {
+  position: absolute;
+  right: 30px;
+  bottom: 90px;
+  z-index: 1000; /* Ensures it stays on top */
+  width: 191px;
+  background-color: #F6D092;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding doesn't affect the final size */
+}
+
+
+.controlPanel button {
+  width: 100%;
+  padding: 5px 0; /* Adjust the padding as needed */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.controlPanel button:hover {
+  background-color: #ccc; /* Hover effect */
+}
+
+/* Specific styles for checked buttons */
+.controlPanel .checked {
+  background-color: #ddd; /* Checked button background */
+}
