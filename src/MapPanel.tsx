@@ -16,7 +16,15 @@ import { createRoot } from "react-dom/client";
 
 import "./MapPanel.css";
 import ControlPanel from "./ControlPanel";
+//////////////////////////////////////////////////
 
+
+// npm init foxglove-extension@latest teleop
+// npm install
+// in teleop folder /npm run local-install
+//authkey for geoserveracess in private 
+
+/////////////////////////////////////////////
 const MapPanel: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null); // attach the map to the DOM
 
@@ -53,7 +61,7 @@ const MapPanel: React.FC = () => {
           TILED: true,
           FORMAT: "image/jpeg",
           TRANSPARENT: false,
-          AuthKey: "6b20b2ac-19b8-4447-b146-325d65cb5ca3",
+          AuthKey: process.env.AUTH_KEY,
         },
         serverType: "geoserver",
         attributions:
